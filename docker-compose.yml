@@ -6,7 +6,6 @@ services:
     build:
       context: .
       target: build
-    container_name: react-app-dev
     ports:
       - "3000:3000"
     volumes:
@@ -22,7 +21,6 @@ services:
   app-prod:
     build:
       context: .
-    container_name: react-app-prod
     ports:
       - "4000:80"
     environment:
