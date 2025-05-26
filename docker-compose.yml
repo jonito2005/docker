@@ -22,7 +22,7 @@ services:
     build:
       context: .
     ports:
-      - "4000:80"
+      - "0.0.0.0:4000:80"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
