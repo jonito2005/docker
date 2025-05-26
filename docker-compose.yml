@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  nextjs-app:
+    container_name: imphnen-community
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # Add any other environment variables your app needs here
+    
+    # If you need to connect to other services like a database, add them below
+    # Example:
+    # depends_on:
+    #   - db
+  
+  # Example database service (uncomment if needed)
+  # db:
+  #   image: postgres:14
+  #   container_name: imphnen-db
+  #   restart: always
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #     - POSTGRES_DB=imphnen
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+
+# volumes:
+#   postgres_data:
